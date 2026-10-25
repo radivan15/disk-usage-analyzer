@@ -1,0 +1,29 @@
+# Binary hasil build
+/bin/
+disk-usage-analyzer
+disk-usage-analyzer.exe
+*.exe
+*.test
+*.out
+
+# Output profiling / coverage
+*.prof
+coverage.txt
+coverage.html
+
+# Workspace Go (lokal)
+go.work
+go.work.sum
+
+# Env & secret
+.env
+.env.*
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Claude Code (settings lokal)
+.claude/settings.local.json
