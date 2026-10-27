@@ -1,7 +1,7 @@
-# Binary hasil build
+# Binary from build
 /bin/
-disk-usage-analyzer
-disk-usage-analyzer.exe
+/disk-usage-analyzer
+/disk-usage-analyzer.exe
 *.exe
 *.test
 *.out
@@ -18,12 +18,10 @@ go.work.sum
 # Env & secret
 .env
 .env.*
+!.env.example
 
 # Editor / OS
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-
-# Claude Code (settings lokal)
-.claude/settings.local.json
