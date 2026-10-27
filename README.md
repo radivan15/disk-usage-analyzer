@@ -36,19 +36,48 @@ Planned — nothing wired up yet, see [ROADMAP.md](ROADMAP.md) for sequencing.
 
 ## Folder Structure
 
-not available yet.
+```
+disk-usage-analyzer/
+├── main.go
+├── go.mod
+├── README.md
+├── ROADMAP.md
+├── LICENSE
+└── .gitignore
+```
 
 ---
 
 ## Installation
 
-not available yet.
+Requires Go 1.27 or newer.
+
+```powershell
+git clone https://github.com/radivan15/disk-usage-analyzer.git
+cd disk-usage-analyzer
+```
 
 ---
 
 ## How to Run
 
-not available yet.
+Currently lists the entries of a single directory (non-recursive), marking each as `file` or `dir`:
+
+```powershell
+go run . C:\Users
+```
+
+```
+file All Users
+dir Default
+file Default User
+dir Public
+file desktop.ini
+dir rrdvan
+```
+
+Missing argument or an invalid path prints an error to stderr and exits with code 1.
+
 ---
 
 ## Roadmap

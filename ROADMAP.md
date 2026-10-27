@@ -8,9 +8,9 @@ My execution plan for this project, broken into phases. I'll check items off as 
 > subdirectory. It makes per-directory sizes natural (the function just returns its size) and
 > Phase 2 only needs to *add* goroutines instead of rewriting the traversal.
 
-- [ ] Set up project (`go mod init`) + hello world → verify: `main.go` & `go.mod` created, `go run .` prints output
-- [ ] Read directory path from CLI arg (`os.Args`) → verify: path printed back, clear error if missing
-- [ ] List one directory's contents, non-recursive (`os.ReadDir`) → verify: entry names + type (file/dir) printed
+- [x] Set up project (`go mod init`) + hello world → verify: `main.go` & `go.mod` created, `go run .` prints output
+- [x] Read directory path from CLI arg (`os.Args`) → verify: path printed back, clear error if missing
+- [x] List one directory's contents, non-recursive (`os.ReadDir`) → verify: entry names + type (file/dir) printed
 - [ ] Sum file sizes in one directory (`entry.Info().Size()`) → verify: total matches File Explorer's "Size" (not "Size on disk")
 - [ ] Make it recursive: a function that calls itself for each subdirectory and returns the total size → verify: total size of a large folder matches a reference tool; symlinks/junctions are not followed (no double-counting)
 - [ ] Handle `permission denied` gracefully — skip that directory and keep going instead of crashing → verify: scanning a restricted folder (e.g. `C:\Users\<me>`) doesn't stop the whole program
